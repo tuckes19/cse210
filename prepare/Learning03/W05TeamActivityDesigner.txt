@@ -1,0 +1,54 @@
+Class
+-Program
+    Constructors
+    -Program()
+
+Class 
+-Scripture
+    Constructors
+    -Scripture(words)
+    {
+        _words = words;
+    }
+        Methods
+        -HideWords
+        -GetRenderedText
+        -IsCompletelyHidden
+            Attributes
+            -string _reference
+            -string _words
+
+Class
+-Reference
+    Constructors
+    -Reference(singleVerse)
+    {
+
+    }
+    -Reference(startingVerse, endingVerse)
+    {
+
+    }
+        Methods
+        -Show
+        -GetRenderedText
+            Attributes
+            -string _book
+            -int _chapter
+            -int _verse
+            -int _endVerse
+
+Class
+-Word
+    Constructors
+    -Word(word)
+    {
+        _word = word;
+    }
+        Methods
+        -Hide
+        -Show
+        -IsHidden
+        -GetRenderedText
+            Attributes
+            -string _word
