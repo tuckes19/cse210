@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        // I exceeded the requirements by adding an activity counter as an
+        // option to look at on the main menu.
+
+        Menu menu = new Menu();
+        menu.DisplayMenu();
     }
 }
