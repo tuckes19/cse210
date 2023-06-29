@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         bool running = true;
+        int tryCounter = 0;
 
         string book = "Alma";
         int chapter = 26;
@@ -25,6 +26,7 @@ class Program
 
         while (running)
         {
+            tryCounter += 1;
             scriptureReference.DisplayReference();
             Console.WriteLine();
             scripture.HideRandomWord();
@@ -33,6 +35,9 @@ class Program
             {
                 word.DisplayWord();
             }
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine($"Attempts: {tryCounter}");
             Console.WriteLine();
 
             Console.Write("Press enter to continue or type 'quit' to finish: ");
