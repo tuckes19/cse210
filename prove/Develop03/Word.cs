@@ -15,21 +15,19 @@ public class Word
     }
 
     // Methods.
-    public void Display()
+    public void DisplayWord()
     {
         if (_shown)
             Console.Write(_word + " ");
         else
-            Console.Write("_" + " ");
+        {
+            int wordLength = _word.Length;
+            string underscores = new string('_', wordLength);
+            Console.Write($"{underscores}" + " ");
+        }
     }
     public void Hide()
     {
         _shown = false;
-    }
-    public string HideWord()
-    {
-        int wordLength = _word.Length;
-        string underscores = new string('_', wordLength);
-        return underscores;
     }
 }

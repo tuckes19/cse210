@@ -1,7 +1,7 @@
 public class Scripture
 {
     // Attributes.
-    public List<Word> _word = new List<Word>();
+    List<Word> _word = new List<Word>();
     Reference _reference;
 
     // Constructors.
@@ -11,6 +11,10 @@ public class Scripture
     }
 
     // Methods.
+    public List<Word> GetWordList()
+    {
+        return _word;
+    }
     public void CreateWordFromString(string verse)
     {
         string[] words = verse.Split(' ');

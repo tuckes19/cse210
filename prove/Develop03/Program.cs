@@ -11,7 +11,6 @@ class Program
         int startVerse = 26;
         int endVerse = 27;
         Reference scriptureReference = new Reference(book, chapter, startVerse, endVerse);
-        scriptureReference.Display();
 
         Scripture scripture = new Scripture();
         string startVerseText = $"{startVerse} But behold, my beloved brethren, we came into the wilderness" +
@@ -22,17 +21,27 @@ class Program
         "and bear with patience thine afflictions, and I will give unto you success.";
         string scriptureText = $"{startVerseText} {endVerseText}";
 
+        scripture.CreateWordFromString(scriptureText);
+
         while (running)
         {
-            scripture.CreateWordFromString(scriptureText);
+            scriptureReference.DisplayReference();
+            Console.WriteLine();
             scripture.HideRandomWord();
         
-            foreach (Word word in scripture._word)
+            foreach (Word word in scripture.GetWordList())
             {
-                word.Display();
+                word.DisplayWord();
             }
+            Console.WriteLine();
 
-            running = false;
+            Console.Write("Press enter to continue or type 'quit' to finish: ");
+            string userInput = Console.ReadLine();
+            
+            if (userInput == "quit")
+                running = false;
+            else
+                Console.Clear();
         }
     }
 }

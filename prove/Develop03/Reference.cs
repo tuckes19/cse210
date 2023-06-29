@@ -25,7 +25,7 @@ public class Reference
     }
 
     // Methods.
-    public void Display()
+    public void DisplayReference()
     {
         if (_verseCount == 1)
         {
