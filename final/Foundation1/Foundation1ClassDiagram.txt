@@ -1,0 +1,37 @@
+Class
+-Program
+    Attributes
+    -N/A
+        Constructors
+        -N/A
+            Methods
+            -Main()
+
+Class
+-Video
+    Attributes
+    -string _title
+    -string _author
+    -int _lengthOfVideo
+    -List<Comment> _comments
+        Constructors
+        public Video()
+        {
+
+        }
+            Methods
+            -NoOfComments()
+
+Class
+-Comment
+    Attributes
+    -string _commenterName
+    -string _commentText
+        Constructors
+        public Comment()
+        {
+
+        }
+            Methods
+            -GetCommenterName()
+            -GetCommentText()
