@@ -1,0 +1,67 @@
+Class
+-Program
+    Attributes
+    -N/A
+        Constructors
+        -N/A
+            Methods
+            -Main()
+
+Class
+-Product
+    Attributes
+    -string _productName
+    -int _productId
+    -int _productPrice
+    -int _productQuantity
+        Constructors
+        public Product()
+        {
+
+        }
+            Methods
+            -ComputePrice()
+
+Class
+-Customer
+    Attributes
+    -string _customerName
+    -Address _customerAddress
+        Constructors
+        public Customer()
+        {
+
+        }
+            Methods
+            -USAorNot()
+
+Class
+-Address
+    Attributes
+    -string _streetAddress
+    -string _city
+    -string _stateProvince
+    -string _country
+        Constructors
+        public Address()
+        {
+
+        }
+            Methods
+            -USAorNot()
+            -ReturnAddress()
+
+Class
+-Order
+    Attributes
+    -List<Product> _products
+    -Customer _customer
+        Constructors
+        public Order()
+        {
+            
+        }
+            Methods
+            -TotalOrderCost()
+            -PackingLabel()
+            -ShippingLabel()
