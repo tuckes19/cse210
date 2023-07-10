@@ -188,11 +188,12 @@ class Menu
                     int userInput = Convert.ToInt32(Console.ReadLine());
                     int goalIndex = userInput - 1;
                     Goal completedGoal = _goals[goalIndex];
-                    completedGoal.CompleteGoal();
                     _totalPoints += completedGoal.GetPoints();
                     int _timesCompleted = completedGoal.GetTimesCompleted();
                     _timesCompleted += 1;
                     completedGoal.SetTimesCompleted(_timesCompleted);
+                    if (_timesCompleted >= completedGoal.GetTimesNeeded())
+                        completedGoal.CompleteGoal();
                     Console.WriteLine();
                     
                     break;
