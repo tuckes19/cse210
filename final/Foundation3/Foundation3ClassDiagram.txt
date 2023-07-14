@@ -1,0 +1,86 @@
+Class
+-Program
+    Attributes
+    -N/A
+        Constructors
+        -N/A
+            Methods
+            -Main()
+
+Class
+-Event
+    Attributes
+    -string _eventTitle
+    -string _eventDescription
+    -DateTime _eventDate
+    -DateTime _eventTime
+    -Address _eventAddress
+        Constructors
+        -public Event()
+        {
+
+        }
+            Methods
+            -ListStandardDetails()
+            -ListShortDescription()
+
+Class
+-Lectures : Event
+    Attributes
+    -string _speaker
+    -int _capacity
+        Constructors
+        public Lecture(string eventTitle, string eventDescription, DateTime eventDate, Address eventAddress) : base(eventTitle, eventDescription, eventDate, eventAddress)
+        {
+            _eventTitle = eventTitle
+            _eventDescription = eventDescription
+            _eventDate = eventDate
+            _eventAddress = eventAddress
+        }
+            Methods
+            -FullDetails()
+
+Class
+-Receptions : Event
+    Attributes
+    -bool _rsvp
+        Constructors
+        -public Receptions(string eventTitle, string eventDescription, DateTime eventDate, Address eventAddress) : base(eventTitle, eventDescription, eventDate, eventAddress)
+        {
+            _eventTitle = eventTitle
+            _eventDescription = eventDescription
+            _eventDate = eventDate
+            _eventAddress = eventAddress
+        }
+            Methods
+            -FullDetails()
+
+Class
+-OutdoorGatherings : Event
+    Attributes
+    -string _weather
+        Constructors
+        -public OutdoorGatherings(string eventTitle, string eventDescription, DateTime eventDate, Address eventAddress) : base(eventTitle, eventDescription, eventDate, eventAddress)
+        {
+            _eventTitle = eventTitle
+            _eventDescription = eventDescription
+            _eventDate = eventDate
+            _eventAddress = eventAddress
+        }
+            Methods
+            -FullDetails()
+
+Class
+-Address
+    Attributes
+    -string _streetAddress
+    -string _city
+    -string _stateProvince
+    -string _country
+        Constructors
+        public Address()
+        {
+
+        }
+            Methods
+            -StringAddress()
